@@ -6,3 +6,4 @@
 # - 7 -> да
 # - 1 -> нет
 
+print ("hello python")
