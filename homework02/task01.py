@@ -6,6 +6,7 @@
 # - 0,56 -> 11
 
 value=float(input())
+value=abs(value)
 sum=0
 s=str(value).split('.')
 for i in [0,1]:
