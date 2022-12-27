@@ -16,5 +16,5 @@ def get_one(array):
     return (list1)
 
 
-array = ["2 psa", 33, 33, 33, 22, 22, 1, "kot", "2 psa"]
+array = [ 33,11, 33, 33, 22, 22, 1, ]
 print(get_one(array))
