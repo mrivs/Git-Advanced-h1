@@ -15,8 +15,7 @@
 
 import random
 
-def status(N,pl):
-    print (f"Конфет осталось: {N}. Ходит {pl} игрок:")
+status=lambda N,pl:print (f"Конфет осталось: {N}. Ходит игрок {pl} : ", end=" ")
 
 def take_sweet(Konf):
     while(True):
@@ -31,14 +30,22 @@ def take_sweet(Konf):
      print("Можно брать от 1 до 28 конфет")
     return Konf
 
+def pc_take_sweet(Konf,max):
+    value=Konf%(max+1)
+    if value==0:value=random.randint(1, 28)
+    Konf=Konf-value
+    print(value)
+    return Konf
+
 def change_pl(pl):
     if pl==1:pl=2
-    elif pl==2:pl=1
+    else:pl=1
     return pl
 
 def hum_game():
     Konf=221
     pl=random.randint(1, 2)
+    print(f"Первый ходит {pl} игрок ")
     while(Konf>0):
         status(Konf,pl)
 
@@ -48,8 +55,24 @@ def hum_game():
         pl=change_pl(pl)
     return 0
 
-
+def pc_game():
+    Konf=221
+    pl=random.randint(1, 2)
+    print(f"Первый ходит {pl} игрок ")
+    while(Konf>0):
+        
+        if pl==1:
+            status(Konf,pl)
+            Konf=take_sweet(Konf)
+        else:
+            status(Konf,"2 (ПК)") 
+            Konf=pc_take_sweet(Konf,28)
+        if -30<Konf<1: print(f"Игрок {pl} выйграл")
+        if Konf==-100: print("Игра прервана")
+        pl=change_pl(pl)
+    return 0
 
 print("Игра в конфеты: \n 1 - человек-человек \n 2 - человек - ПК")
-
-hum_game()
+num=int(input())
+if num==1:hum_game()
+elif num==2:pc_game()
