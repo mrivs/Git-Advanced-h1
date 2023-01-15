@@ -54,7 +54,6 @@ def hum_game():
         if Konf==-100: print("Игра прервана")
         pl=change_pl(pl)
     
-
 def pc_game():
     Konf=221
     pl=random.randint(1, 2)
