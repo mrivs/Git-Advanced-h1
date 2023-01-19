@@ -7,10 +7,7 @@
 #  A (3,6); B (2,1) -> 5,09
 #  A (7,-5); B (1,-1) -> 7,21
 
-x1=float(input("введите х1 "))
-y1=float(input("введите у1 "))
-x2=float(input("введите х2 "))
-y2=float(input("введите у2 "))
 
-l=((x1-x2)**2+(y1-y2)**2)**0.5
-print(round(l,3))
+inp=lambda val:float(input(f"введите {val}: "))
+len=lambda li:round((((li[0]-li[2])**2+(li[1]-li[3])**2)**0.5),3)
+print(len(list(map(inp,"x1 y1 x2 y2".split()))))
