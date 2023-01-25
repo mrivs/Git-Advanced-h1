@@ -11,7 +11,7 @@ def add_data():
     sname= input("введите фамилию: ")
     number=input("введите номер: ")
     comment=input("добавте коментарий: ")
-    string += " "+name+" "+sname+" "+number+" "+" "+comment  
+    string += " "+name+" "+sname+" "+number+" "+comment  
     with open ("homework07/database.txt","a",encoding="utf8") as data:
         data.write(string+"\n")
 

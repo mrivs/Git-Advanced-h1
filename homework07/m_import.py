@@ -10,4 +10,5 @@ def read_data():
 def print_data(): 
     with open ("homework07/database.txt","r", encoding="utf8" ) as data:
         print(data.read())
+
         
