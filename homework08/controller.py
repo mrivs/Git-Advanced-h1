@@ -69,8 +69,8 @@ def start():
             
             
         elif n==4:                          # 4 Показ списка учеников (имена фамилия)
-            for stud, less in scdata.items(): 
-                print (stud,less)
+            for stud in scdata.keys(): 
+                print (stud)
 
         elif n==5:                          # 5 Показ листа оценок конкретного ученика
             name=interface.input_student()
@@ -93,7 +93,7 @@ def start():
                 for name in students:
                     for lesson in lessons:
                         for i in range(1,4):    
-                            scdata[name][lesson].append(random.randint(3,5)) # оценки без двоек
+                            scdata[name][lesson].append(random.randint(2,5)) # оценки 
 
             elif n==2:                      # 2) Вывод средней оценки ученика по одному предмету
                 name=interface.input_student()
