@@ -2,7 +2,7 @@
 import telebot
 from telebot import types
 import random
-bot = telebot.TeleBot("5622659204:AAEn8RCvePPx-d0oKLzz4n2ApGmFB_gSAWQ") 
+bot = telebot.TeleBot("...") 
 Konf=221
 pl=1
 max=28
