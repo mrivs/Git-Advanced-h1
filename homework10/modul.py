@@ -43,7 +43,7 @@ def calculate(a,b,sign):
 
 def is_number(s):
     try:
-        complex(s) # for int, long, float and complex
+        float(s) 
     except ValueError:
         return False
 
@@ -51,7 +51,7 @@ def is_number(s):
 
 def is_complex(s):
     try:
-        complex(s) # for int, long, float and complex
+        complex(s) 
     except ValueError:
         return False
 
