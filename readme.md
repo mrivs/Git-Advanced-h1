@@ -88,3 +88,5 @@
 
    - Определить среднюю стоимость дома, где кол-во людей от 0 до 500 (population)
     - Узнать какая максимальная households в зоне минимального значения population
+
+- some changes for git anvanced
